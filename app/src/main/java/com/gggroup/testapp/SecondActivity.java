@@ -22,9 +22,9 @@ public class SecondActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.ypok);
 
-        tvOut = (TextView) findViewById(R.id.tvOut);
-        btnOk = (Button) findViewById(R.id.btnOk);
-        btnCancel = (Button) findViewById(R.id.btnCancel);
+        tvOut = findViewById(R.id.tvOut);
+        btnOk = findViewById(R.id.btnOk);
+        btnCancel = findViewById(R.id.btnCancel);
 
         btnOk.setOnClickListener(new View.OnClickListener() {
             @Override
