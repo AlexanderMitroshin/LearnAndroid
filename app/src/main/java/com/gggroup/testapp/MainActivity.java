@@ -62,7 +62,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
 
             case R.id.imageView6:
-                view.setText("Privet");
+                Intent menuActivityIntent = new Intent(this,MenuActivity.class);
+                startActivity(menuActivityIntent);
                 break;
             case R.id.imageView5:
                 Intent next = new Intent(this,SecondActivity.class);

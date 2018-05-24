@@ -3,4 +3,8 @@
     <string name="ok_btn">vceOk</string>
     <string name="poka_chelovek">neOk</string>
     <string name="privet_chelovek">TestApp</string>
+    <string name="menu1">menu1</string>
+    <string name="menu2">menu2</string>
+    <string name="menu3">menu3</string>
+    <string name="menu4">menu4</string>
 </resources>
