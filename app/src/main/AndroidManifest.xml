@@ -11,6 +11,18 @@
         android:theme="@style/AppTheme">
         <activity android:name=".MainActivity">
 
+
+        </activity>
+        <activity android:name=".users.UserListActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".TimeActivity">
+
         </activity>
         <activity android:name=".SecondActivity">
 
@@ -19,11 +31,7 @@
 
         </activity>
         <activity android:name=".calc.CalcActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
     </application>
 

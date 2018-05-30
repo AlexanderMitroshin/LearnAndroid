@@ -4,20 +4,28 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
-import android.widget.CheckBox;
-import android.widget.CompoundButton;
+import android.widget.Button;
 import android.widget.TextView;
-import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
     TextView view;
 
+    @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.linerlayout);
+        setContentView(R.layout.activity_main);
 
-        View btn = findViewById(R.id.imageView5);
+
+        Button btnTime = (Button) findViewById(R.id.btnTime);
+        Button btnDate = (Button) findViewById(R.id.btnDate);
+
+        btnTime.setOnClickListener(this);
+        btnDate.setOnClickListener(this);
+
+
+
+      /*  View btn = findViewById(R.id.imageView5);
         btn.setOnClickListener(this);
 
         View leftBtn = findViewById(R.id.imageView2);
@@ -46,11 +54,26 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                }
            }
        });
+   */
     }
 
     @Override
     public void onClick(View v) {
+        Intent intent;
+
         switch (v.getId()) {
+            case R.id.btnTime:
+                intent = new Intent("ru.startandroid.intent.action.showtime");
+                startActivity(intent);
+                break;
+            case R.id.btnDate:
+                intent = new Intent("ru.startandroid.intent.action.showdate");
+                startActivity(intent);
+                break;
+        }
+    }
+
+       /* switch (v.getId()) {
             case R.id.imageView2:
                 Toast.makeText(MainActivity.this, "privet ya levaya knopka", Toast.LENGTH_SHORT).show();
                 break;
@@ -71,5 +94,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
 
         }
-    }
-}
+    */
+
+
+        }
